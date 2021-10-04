@@ -77,3 +77,8 @@ F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\AutoMap
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

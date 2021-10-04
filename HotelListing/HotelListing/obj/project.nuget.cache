@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ogkg8jY2drfrGgBiPGGR2KBxsoZ3nuayzRUD+daccaFbxkVtwe5QkhwdWt+kbzBCEypxZkHTNlRw6XWunRWHvg==",
+  "dgSpecHash": "W7D5tvmDEtQphgpV8dTEb+nvBbavy7doyscufbByG2v9NALSFxowX1VC0GOsWQ9Vgej5N8jBYhngz88Z1mGOPg==",
   "success": true,
   "projectFilePath": "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing\\HotelListing.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "C:\\Users\\Alexandr\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.10\\microsoft.aspnetcore.authentication.jwtbearer.5.0.10.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.10\\microsoft.aspnetcore.authentication.openidconnect.5.0.10.nupkg.sha512",
+    "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.10\\microsoft.aspnetcore.cryptography.internal.5.0.10.nupkg.sha512",
+    "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.10\\microsoft.aspnetcore.cryptography.keyderivation.5.0.10.nupkg.sha512",
+    "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.10\\microsoft.aspnetcore.jsonpatch.5.0.10.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.10\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.10.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -33,6 +36,8 @@
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.0.4\\microsoft.extensions.dependencymodel.2.0.4.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.8\\microsoft.extensions.fileproviders.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\3.1.8\\microsoft.extensions.hosting.abstractions.3.1.8.nupkg.sha512",
+    "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.10\\microsoft.extensions.identity.core.5.0.10.nupkg.sha512",
+    "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.10\\microsoft.extensions.identity.stores.5.0.10.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",

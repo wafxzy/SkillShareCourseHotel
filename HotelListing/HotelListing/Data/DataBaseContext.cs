@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelListing.Data
 {
-    public class DataBaseContext: DbContext
+    public class DataBaseContext: IdentityDbContext<ApiUser>
     {
         public DataBaseContext(DbContextOptions options) :base(options)
         {}
@@ -14,6 +15,7 @@ namespace HotelListing.Data
         public DbSet<Hotel> Hotels { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
             builder.Entity<Country>().HasData(
 
                 new Country
