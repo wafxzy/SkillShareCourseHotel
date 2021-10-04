@@ -1,5 +1,7 @@
 using HotelListing.Configurations;
 using HotelListing.Data;
+using HotelListing.IRepository;
+using HotelListing.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,7 +34,7 @@ namespace HotelListing
             services.AddDbContext<DataBaseContext>(
               options =>
               options.UseSqlServer(Configuration.GetConnectionString("HotelListing"))
-            ) ;
+            );
 
             services.AddAutoMapper(typeof(MapperInitializer));
 
@@ -40,12 +42,18 @@ namespace HotelListing
                 c.AddPolicy("CorsPolicy", Builder =>
                  Builder.AllowAnyOrigin()
                  .AllowAnyMethod().AllowAnyHeader());
-           });
-            services.AddControllers();
+            });
+
+
+            services.AddControllers().AddNewtonsoftJson(op =>
+             op.SerializerSettings.ReferenceLoopHandling =
+                 Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
             });
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +74,10 @@ namespace HotelListing
             app.UseCors("CorsPolicy");
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action-Index}/{id?}"
+                    );
                 endpoints.MapControllers();
             });
         }

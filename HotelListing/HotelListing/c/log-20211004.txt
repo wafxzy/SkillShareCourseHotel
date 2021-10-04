@@ -1,0 +1,486 @@
+2021-10-04 13:10:29.570 +03:00 [INF] App strt 
+2021-10-04 13:10:30.565 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 13:10:30.567 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 13:10:30.568 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 13:10:30.583 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger - - 
+2021-10-04 13:10:30.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 13:10:30.619 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger - - - 301 - - 37.7583ms 
+2021-10-04 13:10:30.662 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 46.6015ms 
+2021-10-04 13:10:30.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/swagger-ui-bundle.js - - 
+2021-10-04 13:10:30.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/swagger-ui.css - - 
+2021-10-04 13:10:30.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/swagger-ui-standalone-preset.js - - 
+2021-10-04 13:10:30.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - 
+2021-10-04 13:10:30.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - - 200 3087 application/javascript;+charset=utf-8 1.1163ms 
+2021-10-04 13:10:30.691 +03:00 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' 
+2021-10-04 13:10:30.693 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/swagger-ui.css - - - 200 142933 text/css 14.0304ms 
+2021-10-04 13:10:30.717 +03:00 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' 
+2021-10-04 13:10:30.721 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 40.9738ms 
+2021-10-04 13:10:30.725 +03:00 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' 
+2021-10-04 13:10:30.736 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 56.7976ms 
+2021-10-04 13:10:30.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 13:10:30.872 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 43.4308ms 
+2021-10-04 13:10:35.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:10:35.975 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:10:35.992 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:10:36.217 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 222.0262ms 
+2021-10-04 13:10:36.218 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:10:36.219 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:10:36.270 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country - - - 500 - text/plain 313.8346ms 
+2021-10-04 13:11:47.598 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:11:47.599 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:11:47.599 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:11:47.599 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.311ms 
+2021-10-04 13:11:47.599 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:11:47.599 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:11:47.600 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 2.4604ms 
+2021-10-04 13:15:41.049 +03:00 [INF] App strt 
+2021-10-04 13:15:41.223 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 13:15:41.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 13:15:41.250 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 13:15:41.251 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 13:15:41.317 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 86.1610ms 
+2021-10-04 13:15:41.335 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - 
+2021-10-04 13:15:41.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/_framework/aspnetcore-browser-refresh.js - - - 200 3087 application/javascript;+charset=utf-8 1.5829ms 
+2021-10-04 13:15:41.453 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 13:15:41.456 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/favicon-32x32.png - - 
+2021-10-04 13:15:41.485 +03:00 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' 
+2021-10-04 13:15:41.485 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/favicon-32x32.png - - - 200 628 image/png 29.1054ms 
+2021-10-04 13:15:41.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 43.3730ms 
+2021-10-04 13:15:45.798 +03:00 [INF] App strt 
+2021-10-04 13:15:46.908 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 13:15:46.909 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 13:15:46.911 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 13:15:46.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 13:15:47.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 83.0098ms 
+2021-10-04 13:15:47.174 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 13:15:47.216 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.2036ms 
+2021-10-04 13:15:53.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:15:53.810 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:15:53.827 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:15:53.937 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 107.3998ms 
+2021-10-04 13:15:53.937 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:15:53.939 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:15:53.980 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country - - - 500 - text/plain 190.7048ms 
+2021-10-04 13:15:59.801 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:15:59.802 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:15:59.803 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:15:59.804 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.9846ms 
+2021-10-04 13:15:59.804 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:15:59.804 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:15:59.805 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 4.0994ms 
+2021-10-04 13:16:00.595 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:16:00.595 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:00.595 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:16:00.597 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 1.4227ms 
+2021-10-04 13:16:00.597 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:00.597 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:16:00.598 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 3.4043ms 
+2021-10-04 13:16:01.110 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:16:01.110 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:01.111 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:16:01.111 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.8433ms 
+2021-10-04 13:16:01.112 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:01.112 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:16:01.113 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 2.8537ms 
+2021-10-04 13:16:12.423 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:16:12.423 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:12.423 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:16:12.424 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.7122ms 
+2021-10-04 13:16:12.424 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:12.424 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:16:12.425 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 2.3934ms 
+2021-10-04 13:16:13.291 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:16:13.291 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:13.292 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:16:13.292 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.5718ms 
+2021-10-04 13:16:13.292 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:13.293 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:16:13.294 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 2.2741ms 
+2021-10-04 13:16:14.275 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:16:14.275 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:14.275 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:16:14.276 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.7983ms 
+2021-10-04 13:16:14.276 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:14.277 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:16:14.278 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 2.4373ms 
+2021-10-04 13:16:14.935 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:16:14.935 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:14.935 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:16:14.936 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.4451ms 
+2021-10-04 13:16:14.936 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:16:14.936 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:16:14.937 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 2.3268ms 
+2021-10-04 13:25:47.962 +03:00 [INF] App strt 
+2021-10-04 13:25:48.758 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 13:25:48.759 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 13:25:48.761 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 13:25:48.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 13:25:48.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 78.5363ms 
+2021-10-04 13:25:48.985 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 13:25:49.027 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 41.1900ms 
+2021-10-04 13:25:55.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country - - 
+2021-10-04 13:25:55.158 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:25:55.174 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 13:25:55.257 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 79.5565ms 
+2021-10-04 13:25:55.257 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 13:25:55.259 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 13:25:55.292 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country - - - 500 - text/plain 153.4715ms 
+2021-10-04 14:00:25.519 +03:00 [INF] App strt 
+2021-10-04 14:00:26.270 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 14:00:26.272 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 14:00:26.273 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 14:00:26.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 14:00:26.367 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 84.7567ms 
+2021-10-04 14:00:26.521 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 14:00:26.569 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.8683ms 
+2021-10-04 14:00:31.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country - - 
+2021-10-04 14:00:31.512 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:00:31.528 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 14:00:31.613 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 82.41ms 
+2021-10-04 14:00:31.614 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:00:31.616 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 14:00:31.651 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country - - - 500 - text/plain 158.1893ms 
+2021-10-04 14:01:00.837 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 14:01:00.842 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:01:00.845 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 14:01:00.849 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 3.6363ms 
+2021-10-04 14:01:00.849 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:01:00.849 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 14:01:00.853 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 16.7176ms 
+2021-10-04 14:49:35.776 +03:00 [INF] App strt 
+2021-10-04 14:49:36.591 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 14:49:36.593 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 14:49:36.594 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 14:49:36.607 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 14:49:36.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 93.2308ms 
+2021-10-04 14:49:36.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 14:49:36.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.4246ms 
+2021-10-04 14:49:53.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country - - 
+2021-10-04 14:49:53.897 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:49:53.913 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 14:49:53.997 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 81.1885ms 
+2021-10-04 14:49:53.998 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:49:54.000 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 14:49:54.031 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country - - - 500 - text/plain 155.6583ms 
+2021-10-04 14:50:11.649 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 14:50:11.650 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:50:11.650 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 14:50:11.651 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 0.7949ms 
+2021-10-04 14:50:11.651 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:50:11.652 +03:00 [ERR] An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'HotelListing.Controllers.CountryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-04 14:50:11.653 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 500 - text/plain 3.8918ms 
+2021-10-04 14:55:28.831 +03:00 [INF] App strt 
+2021-10-04 14:55:29.553 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 14:55:29.555 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 14:55:29.556 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 14:55:29.567 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 14:55:29.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 81.4354ms 
+2021-10-04 14:55:29.781 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 14:55:29.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.1937ms 
+2021-10-04 14:55:36.351 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44304/api/Country - - 
+2021-10-04 14:55:36.376 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:55:36.393 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 14:55:37.030 +03:00 [INF] Entity Framework Core "5.0.10" initialized '"DataBaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" 
+2021-10-04 14:55:37.728 +03:00 [INF] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT [c].[Id], [c].[Name], [c].[ShortName]\r\nFROM [Countries] AS [c]" 
+2021-10-04 14:55:37.750 +03:00 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[HotelListing.Data.Country, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+2021-10-04 14:55:37.890 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 1494.8052ms 
+2021-10-04 14:55:37.891 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 14:55:37.894 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44304/api/Country - - - 200 171 application/json;+charset=utf-8 1542.5819ms 
+2021-10-04 15:06:03.038 +03:00 [INF] App strt 
+2021-10-04 15:06:03.889 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 15:06:03.891 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 15:06:03.892 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 15:06:03.903 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 15:06:03.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 83.8825ms 
+2021-10-04 15:06:04.115 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 15:06:04.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.8455ms 
+2021-10-04 15:06:07.997 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country - - 
+2021-10-04 15:06:08.018 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 15:06:08.038 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 15:06:08.521 +03:00 [INF] Entity Framework Core "5.0.10" initialized '"DataBaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" 
+2021-10-04 15:06:08.929 +03:00 [INF] Executed DbCommand ("23"ms) [Parameters=[""], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT [c].[Id], [c].[Name], [c].[ShortName]\r\nFROM [Countries] AS [c]" 
+2021-10-04 15:08:28.687 +03:00 [INF] App strt 
+2021-10-04 15:08:29.500 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 15:08:29.502 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 15:08:29.503 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 15:08:29.514 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 15:08:29.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 86.1225ms 
+2021-10-04 15:08:29.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 15:08:29.772 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.1462ms 
+2021-10-04 15:08:34.212 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country - - 
+2021-10-04 15:08:34.232 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 15:08:34.248 +03:00 [INF] Route matched with "{action = \"GetCountries\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries()" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 15:08:34.841 +03:00 [INF] Entity Framework Core "5.0.10" initialized '"DataBaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" 
+2021-10-04 15:08:35.213 +03:00 [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT [c].[Id], [c].[Name], [c].[ShortName]\r\nFROM [Countries] AS [c]" 
+2021-10-04 15:08:35.250 +03:00 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[HotelListing.Models.CountryDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+2021-10-04 15:08:35.346 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 1094.9617ms 
+2021-10-04 15:08:35.346 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
+2021-10-04 15:08:35.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country - - - 200 165 application/json;+charset=utf-8 1136.9266ms 
+2021-10-04 15:25:47.247 +03:00 [INF] App strt 
+2021-10-04 15:25:48.086 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 15:25:48.088 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 15:25:48.089 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 15:25:48.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 15:25:48.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 91.6258ms 
+2021-10-04 15:25:48.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 15:25:48.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.6238ms 
+2021-10-04 15:25:57.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Country/2 - - 
+2021-10-04 15:25:57.321 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.CountryController.GetCountry (HotelListing)"' 
+2021-10-04 15:25:57.343 +03:00 [INF] Route matched with "{action = \"GetCountry\", controller = \"Country\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountry(Int32)" on controller "HotelListing.Controllers.CountryController" ("HotelListing"). 
+2021-10-04 15:25:57.937 +03:00 [INF] Entity Framework Core "5.0.10" initialized '"DataBaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" 
+2021-10-04 15:25:58.446 +03:00 [INF] Executed DbCommand ("37"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT [t].[Id], [t].[Name], [t].[ShortName], [h].[Id], [h].[Adress], [h].[CountryId], [h].[Name], [h].[Rating]\r\nFROM (\r\n    SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]\r\n    FROM [Countries] AS [c]\r\n    WHERE [c].[Id] = @__id_0\r\n) AS [t]\r\nLEFT JOIN [Hotels] AS [h] ON [t].[Id] = [h].[CountryId]\r\nORDER BY [t].[Id], [h].[Id]" 
+2021-10-04 15:25:58.492 +03:00 [INF] Executing "OkObjectResult", writing value of type '"HotelListing.Models.CountryDTO"'. 
+2021-10-04 15:25:58.583 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountry (HotelListing)" in 1236.1289ms 
+2021-10-04 15:25:58.583 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountry (HotelListing)"' 
+2021-10-04 15:25:58.585 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country/2 - - - 200 124 application/json;+charset=utf-8 1285.1359ms 
+2021-10-04 15:32:43.959 +03:00 [INF] App strt 
+2021-10-04 15:32:44.766 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-04 15:32:44.771 +03:00 [INF] Hosting environment: "Development" 
+2021-10-04 15:32:44.772 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-04 15:32:44.783 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-04 15:32:44.860 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 78.6177ms 
+2021-10-04 15:32:45.003 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-04 15:32:45.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 46.8779ms 
+2021-10-04 15:32:50.255 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Hotel - - 
+2021-10-04 15:32:50.278 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.HotelController.GetHotels (HotelListing)"' 
+2021-10-04 15:32:50.295 +03:00 [INF] Route matched with "{action = \"GetHotels\", controller = \"Hotel\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels()" on controller "HotelListing.Controllers.HotelController" ("HotelListing"). 
+2021-10-04 15:32:50.879 +03:00 [INF] Entity Framework Core "5.0.10" initialized '"DataBaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" 
+2021-10-04 15:32:51.258 +03:00 [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT [h].[Id], [h].[Adress], [h].[CountryId], [h].[Name], [h].[Rating]\r\nFROM [Hotels] AS [h]" 
+2021-10-04 15:32:51.298 +03:00 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[HotelListing.Models.HotelDTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+2021-10-04 15:32:51.388 +03:00 [INF] Executed action "HotelListing.Controllers.HotelController.GetHotels (HotelListing)" in 1090.1607ms 
+2021-10-04 15:32:51.388 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.HotelController.GetHotels (HotelListing)"' 
+2021-10-04 15:32:51.391 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Hotel - - - 200 265 application/json;+charset=utf-8 1136.2088ms 
+2021-10-04 15:33:07.063 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/api/Hotel/2 - - 
+2021-10-04 15:33:07.065 +03:00 [INF] Executing endpoint '"HotelListing.Controllers.HotelController.GetHotel (HotelListing)"' 
+2021-10-04 15:33:07.074 +03:00 [INF] Route matched with "{action = \"GetHotel\", controller = \"Hotel\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotel(Int32)" on controller "HotelListing.Controllers.HotelController" ("HotelListing"). 
+2021-10-04 15:33:07.103 +03:00 [INF] Entity Framework Core "5.0.10" initialized '"DataBaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" 
+2021-10-04 15:33:07.198 +03:00 [INF] Executed DbCommand ("23"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT TOP(1) [h].[Id], [h].[Adress], [h].[CountryId], [h].[Name], [h].[Rating], [c].[Id], [c].[Name], [c].[ShortName]\r\nFROM [Hotels] AS [h]\r\nINNER JOIN [Countries] AS [c] ON [h].[CountryId] = [c].[Id]\r\nWHERE [h].[Id] = @__id_0" 
+2021-10-04 15:33:07.204 +03:00 [INF] Executing "OkObjectResult", writing value of type '"HotelListing.Models.HotelDTO"'. 
+2021-10-04 15:33:07.206 +03:00 [INF] Executed action "HotelListing.Controllers.HotelController.GetHotel (HotelListing)" in 132.2834ms 
+2021-10-04 15:33:07.206 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.HotelController.GetHotel (HotelListing)"' 
+2021-10-04 15:33:07.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Hotel/2 - - - 200 135 application/json;+charset=utf-8 143.1506ms 
