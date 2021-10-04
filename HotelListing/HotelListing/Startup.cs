@@ -1,3 +1,4 @@
+using HotelListing.Configurations;
 using HotelListing.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,7 +33,8 @@ namespace HotelListing
               options =>
               options.UseSqlServer(Configuration.GetConnectionString("HotelListing"))
             ) ;
-              
+
+            services.AddAutoMapper(typeof(MapperInitializer));
 
             services.AddCors(c => {
                 c.AddPolicy("CorsPolicy", Builder =>
