@@ -1,72 +1,26 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using HotelListing.Configurations.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HotelListing.Data
 {
-    public class DataBaseContext: IdentityDbContext<ApiUser>
+    public class DataBaseContext : IdentityDbContext<ApiUser>
     {
-        public DataBaseContext(DbContextOptions options) :base(options)
-        {}
+        public DataBaseContext(DbContextOptions options) : base(options)
+        { }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Country>().HasData(
 
-                new Country
-                {
-                    Id = 1,
-                    Name = "Ukraine",
-                    ShortName = "Ukr"
-                },
-                new Country
-                {
-                    Id = 2,
-                    Name = "Canada",
-                    ShortName = "Can"
-                },
-                new Country
-                {
-                    Id = 3,
-                    Name = "England",
-                    ShortName = "Eng"
-                }
-                );
-            builder.Entity<Hotel>().HasData(
+            builder.ApplyConfiguration(new CountryConfiguration());
 
-               new Hotel
-               {
-                   Id = 1,
-                   Name = "Kharkiv Hotel",
-                   Adress = "Maydan Nezalezhnosti",
-                   CountryId=1,
-                   Rating=4.2
-                   
-               },
-               new Hotel
-               {
-                   Id = 2,
-                   Name = "SilverStone",
-                   Adress = "New Scotland",
-                   CountryId = 2,
-                   Rating = 4.8
-               },
-               new Hotel
-               {
-                   Id = 3,
-                   Name = "New faunland",
-                   Adress = "London street 22b",
-                   CountryId = 3,
-                   Rating = 5.0
-               }
-               );
+            builder.ApplyConfiguration(new HotelConfiguration());
+            builder.ApplyConfiguration(new RoleConfiguration());
+
         }
 
-    
+
     }
 }

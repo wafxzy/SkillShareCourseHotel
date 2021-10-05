@@ -14,7 +14,9 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "KEY": "ffc632ce-0053--4bab-8077-93a4d14caaasd"
+        
       }
     },
     "HotelListing": {
