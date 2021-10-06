@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HotelListing.Models
 {
@@ -23,7 +20,10 @@ namespace HotelListing.Models
         [Required]
         public int CountryId { get; set; }
     }
+    public class UpdateHotelDTO : CreateHotelDTO
+    {
 
+    }
     public class HotelDTO : CreateHotelDTO
     {
         public int Id { get; set; }

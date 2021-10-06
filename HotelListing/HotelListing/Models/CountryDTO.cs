@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HotelListing.Models
 {
@@ -14,6 +11,10 @@ namespace HotelListing.Models
         [Required]
         [StringLength(maximumLength: 3, ErrorMessage = "Short Country Name Is Too Long")]
         public string ShortName { get; set; }
+    }
+    public class UpdateCountryDTO : CreateCountryDTO
+    {
+        public IList<HotelDTO> Hotels { get; set; }
     }
     public class CountryDTO : CreateCountryDTO
     {
