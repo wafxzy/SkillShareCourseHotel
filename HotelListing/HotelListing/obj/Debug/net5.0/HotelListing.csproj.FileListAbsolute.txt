@@ -82,3 +82,6 @@ F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microso
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\JetBrains.Annotations.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
