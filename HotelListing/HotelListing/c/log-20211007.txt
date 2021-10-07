@@ -71,3 +71,23 @@ System.InvalidOperationException: Unable to resolve service for type 'AspNetCore
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
    at HotelListing.Program.Main(String[] args) in F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\Program.cs:line 27
+2021-10-07 16:21:37.775 +03:00 [INF] App strt 
+2021-10-07 16:21:38.713 +03:00 [INF] User profile is available. Using '"C:\\Users\\Alexandr\\AppData\\Local\\ASP.NET\\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+2021-10-07 16:21:38.947 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-07 16:21:38.947 +03:00 [INF] Hosting environment: "Development" 
+2021-10-07 16:21:38.947 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-07 16:21:38.977 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger - - 
+2021-10-07 16:21:39.012 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-07 16:21:39.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger - - - 301 - - 60.5304ms 
+2021-10-07 16:21:39.110 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 98.7743ms 
+2021-10-07 16:21:39.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/swagger-ui.css - - 
+2021-10-07 16:21:39.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/swagger-ui-standalone-preset.js - - 
+2021-10-07 16:21:39.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/swagger-ui-bundle.js - - 
+2021-10-07 16:21:39.186 +03:00 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' 
+2021-10-07 16:21:39.186 +03:00 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' 
+2021-10-07 16:21:39.188 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/swagger-ui.css - - - 200 142933 text/css 54.9803ms 
+2021-10-07 16:21:39.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 57.7616ms 
+2021-10-07 16:21:39.193 +03:00 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' 
+2021-10-07 16:21:39.205 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 71.8261ms 
+2021-10-07 16:21:39.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-07 16:21:39.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 78.2168ms 
