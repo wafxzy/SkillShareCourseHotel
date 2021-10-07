@@ -1,3 +1,4 @@
+using AspNetCoreRateLimit;
 using HotelListing.Configurations;
 using HotelListing.Data;
 using HotelListing.IRepository;
@@ -5,19 +6,12 @@ using HotelListing.Repository;
 using HotelListing.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HotelListing
 {
@@ -40,19 +34,33 @@ namespace HotelListing
 
             services.AddAutoMapper(typeof(MapperInitializer));
 
-            services.AddCors(c => {
+            services.AddCors(c =>
+            {
                 c.AddPolicy("CorsPolicy", Builder =>
                  Builder.AllowAnyOrigin()
                  .AllowAnyMethod().AllowAnyHeader());
             });
-
+            services.ConfigureRateLimiting();
+            services.AddHttpContextAccessor();
+            services.AddMemoryCache();
+            services.ConfigureHttpCacheHeaders();
+            services.AddResponseCaching();
             services.AddAuthentication();
             services.ConfigureIdentity();
             services.ConfigureJWT(Configuration);
 
-            services.AddControllers().AddNewtonsoftJson(op =>
+            services.AddControllers(config =>
+            {
+                config.CacheProfiles.Add("120SecondsDuration", new CacheProfile
+                {
+                    Duration = 120
+                });
+            }
+            ).AddNewtonsoftJson(op =>
              op.SerializerSettings.ReferenceLoopHandling =
                  Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            services.ConfigureVersioning();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
@@ -74,8 +82,11 @@ namespace HotelListing
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HotelListing v1"));
             }
 
+            app.UseHttpCacheHeaders();
+            app.ConfigureExceptionHandler();
             app.UseHttpsRedirection();
-
+            app.UseResponseCaching();
+            app.UseIpRateLimiting();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

@@ -85,3 +85,6 @@ F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microso
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\JetBrains.Annotations.dll
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.dll
 F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\Marvin.Cache.Headers.dll
+F:\Work\SkillShareCourseHotel\HotelListing\HotelListing\bin\Debug\net5.0\AspNetCoreRateLimit.dll

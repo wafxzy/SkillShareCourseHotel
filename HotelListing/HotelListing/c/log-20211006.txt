@@ -272,3 +272,12 @@
 2021-10-06 17:04:46.314 +03:00 [INF] Executed action "HotelListing.Controllers.CountryController.GetCountries (HotelListing)" in 179.4114ms 
 2021-10-06 17:04:46.314 +03:00 [INF] Executed endpoint '"HotelListing.Controllers.CountryController.GetCountries (HotelListing)"' 
 2021-10-06 17:04:46.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/api/Country - - - 200 165 application/json;+charset=utf-8 183.6111ms 
+2021-10-06 18:35:22.271 +03:00 [INF] App strt 
+2021-10-06 18:35:23.118 +03:00 [INF] User profile is available. Using '"C:\\Users\\Alexandr\\AppData\\Local\\ASP.NET\\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. 
+2021-10-06 18:35:23.319 +03:00 [INF] Application started. Press Ctrl+C to shut down. 
+2021-10-06 18:35:23.319 +03:00 [INF] Hosting environment: "Development" 
+2021-10-06 18:35:23.320 +03:00 [INF] Content root path: "F:\\Work\\SkillShareCourseHotel\\HotelListing\\HotelListing" 
+2021-10-06 18:35:23.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/index.html - - 
+2021-10-06 18:35:23.436 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/index.html - - - 200 - text/html;charset=utf-8 88.7443ms 
+2021-10-06 18:35:23.593 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - 
+2021-10-06 18:35:23.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44304/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.5028ms 
