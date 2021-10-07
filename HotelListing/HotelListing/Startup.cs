@@ -1,4 +1,3 @@
-using AspNetCoreRateLimit;
 using HotelListing.Configurations;
 using HotelListing.Data;
 using HotelListing.IRepository;
@@ -40,8 +39,7 @@ namespace HotelListing
                  Builder.AllowAnyOrigin()
                  .AllowAnyMethod().AllowAnyHeader());
             });
-            services.ConfigureRateLimiting();
-            services.AddHttpContextAccessor();
+
             services.AddMemoryCache();
             services.ConfigureHttpCacheHeaders();
             services.AddResponseCaching();
@@ -86,7 +84,6 @@ namespace HotelListing
             app.ConfigureExceptionHandler();
             app.UseHttpsRedirection();
             app.UseResponseCaching();
-            app.UseIpRateLimiting();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
